@@ -54,7 +54,6 @@ class MainFragment : Fragment() {
     fun fontRequestTest(){
 
         val query = "name=Creepster"
-
         val request = FontRequest(
             "com.google.android.gms.fonts",
             "com.google.android.gms",
@@ -103,9 +102,6 @@ class MainFragment : Fragment() {
     fun traeFontList(){
 
         DownloadableFontList.requestDownloadableFontList(calbackFont, "xxxxxxxxxxxxxxxxxxxxx")
-
-
-
     }
 
     val calbackFont = object  : DownloadableFontList.FontListCallback{
@@ -117,8 +113,6 @@ class MainFragment : Fragment() {
                 Log.v("msg","query=${it.getQueryString()} ")
             }
             Log.v("msg","total fonts=${listaNames.size}")
-
-
         }
 
         override fun onTypefaceRequestFailed(p0: Int) {
